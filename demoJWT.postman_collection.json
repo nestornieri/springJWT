@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "166719c8-d87a-4ae3-a279-c2ded78843ff",
+		"name": "demoJWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39071642"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/auth/log-body",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"user\",\r\n  \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/auth/log-body"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/auth/log-parm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/auth/log-parm",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"log-parm"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "user",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/saludo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzI5MTE3OTUyLCJleHAiOjE3MjkxNTM5NTJ9.G619PsCqt8F4dOaLKsbhtbiVKgukqoDevkB1Hm-iVEo"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/saludo"
+			},
+			"response": []
+		}
+	]
+}
